@@ -31,7 +31,9 @@ interface CyclesContextProviderProps {
   children: ReactNode;
 }
 
-export function CyclesContextProvider({ children }) {
+export function CyclesContextProvider({
+  children,
+}: CyclesContextProviderProps) {
   const [cycles, setCycles] = useState<Cycle[]>([]);
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null);
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
